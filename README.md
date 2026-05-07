@@ -60,4 +60,4 @@ Machine Learning based House Price Prediction Website with modern UI.
 
 ## 👨‍💻 Developed By
 
-Gauravgatty
+Gaurav Gatty

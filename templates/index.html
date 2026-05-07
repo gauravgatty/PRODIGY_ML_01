@@ -24,35 +24,50 @@
 
         <form action="/predict" method="POST">
 
-            <input
-                type="number"
-                name="square_feet"
-                placeholder="Enter Square Feet"
-                value="{{ square_feet if square_feet else '' }}"
-                required
-            >
+    <div class="input-group">
 
-            <input
-                type="number"
-                name="bedrooms"
-                placeholder="Enter Bedrooms"
-                value="{{ bedrooms if bedrooms else '' }}"
-                required
-            >
+        <label>Square Feet</label>
 
-            <input
-                type="number"
-                name="bathrooms"
-                placeholder="Enter Bathrooms"
-                value="{{ bathrooms if bathrooms else '' }}"
-                required
-            >
+        <input
+            type="number"
+            name="square_feet"
+            value="{{ square_feet if square_feet else '' }}"
+            required
+        >
 
-            <button type="submit">
-                Predict Price
-            </button>
+    </div>
 
-        </form>
+    <div class="input-group">
+
+        <label>Number of Bedrooms</label>
+
+        <input
+            type="number"
+            name="bedrooms"
+            value="{{ bedrooms if bedrooms else '' }}"
+            required
+        >
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Number of Bathrooms</label>
+
+        <input
+            type="number"
+            name="bathrooms"
+            value="{{ bathrooms if bathrooms else '' }}"
+            required
+        >
+
+    </div>
+
+    <button type="submit">
+        Predict Price
+    </button>
+
+</form>
 
         {% if prediction_text %}
             <div class="result">
